@@ -1,4 +1,4 @@
-# Backbase Front End Assignment: Make A Transaction
+# Banking-App: Make A Transaction
 
 # Description
 
