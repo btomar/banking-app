@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="transactionApp">
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Kanit" />
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <script src="../assets/libs/angular.min.js"></script>
+        <script src="../assets/js/businessLogic.js"/></script>
+    </head>
+    <body ng-controller="transactionController" class="main-bg" >
+        <div class="header">
+            <div class="bg-image"></div>
+        </div>
+        <div class="container">
+            <div class="transaction-form" >                
+                <div class="tf-title"><span class="tf-refresh"></span>{{transTitle}}</div>
+                <form>
+                    <p class="tf-input">
+                    <label for="srcAccount">FROM ACCOUNT</label>
+                    </p>
+                    <p class="tf-input">
+                        <input ng-disabled="true" type="text" ng-model="fromAccount" ng-attr-placeholder="{{fromAccount}}">
+                    </p>
+                    <p class="tf-input">
+                        <label for="destAccount">TO ACCOUNT</label>
+                    </p>
+                    <p class="tf-input">
+                        <input type="text" ng-model="trans.destAccount" placeholder="Georgia Power Electric Company"/>
+                    </p>
+                    <p class="tf-input">
+                        <label for="amount">AMOUNT</label>
+                    </p>
+                    <p class="tf-input">
+                        <input type="text" ng-model="trans.amount" placeholder="$ 0.00"/>
+                    </p>
+                    <p class="tf-btn-submit">
+                        <button type="submit" ng-hide="submitFlag" ng-click="previewTransaction($event)">{{btnValue}}</button>
+                        <button type="submit" ng-show="submitFlag" ng-click="submitTransfer($event)">{{btnValue}}</button>
+                    </p>                   
+                </form>
+            </div>
+            <div class="trans-history">
+                <span class="tf-briefcase"></span>
+                <div class="tf-title">Recent Transactions</div>
+                <div class="tf-trans-list">
+                     <ul class="tf-list">
+                        <li class="tf-list-item" ng-repeat="transaction in transactions">
+                            <span class="tf-code" ng-style="{background: transaction.categoryCode}"></span>
+                            <span id="transDate" class="tf-date">{{transaction.transactionDate| date: 'MMM-dd'}}</span>
+                            <span class="tf-logo"><img data-ng-src="{{transaction.merchantLogo}}"/></span>
+                            <div class="tf-merchant">{{ transaction.merchant}}<span class="tf-type">{{transaction.transactionType}}</span></div>
+                            <span class="tf-amount">-${{transaction.amount}}</span>
+                        </li>
+                    </ul>                     
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

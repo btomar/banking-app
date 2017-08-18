@@ -1,0 +1,209 @@
+/*
+Styles affecting the whole app
+
+*/
+
+body {
+    font-family: 'Kanit';
+}
+
+.main-bg {
+    background-image: url("../imgs/background.jpg");
+    margin: 30px 0 0 0;
+    background-size: cover;
+    z-index: -5;
+}
+
+.header {
+    border-bottom: 3px solid #F48024;
+    background: #FFFFFF;
+    width: 100%;
+    top:0;
+    position: fixed;
+}
+
+.bg-image {
+    background:  url("../imgs/logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 448px;
+    height: 50px;
+    margin: 10px 0 10px 100px;
+    
+}
+
+.container {
+    margin: 100px 0 0 20px;
+    height: auto;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+}
+
+/*
+    Styles affecting the transaction form panel on left
+*/
+
+.transaction-form {
+    border: 1px solid #c0c0c0;   
+    display: inline-block;   
+    height: 350px;
+    width: 20%;
+    margin: 10px 0 0 100px;
+    background: #FFFFFF;
+}
+
+.tf-refresh {
+    background: url("../icons/arrows.png");
+    color:#C0C0C0;
+    background-blend-mode: multiply; 
+    height: 24px;
+    width: 28px;
+    z-index:20;
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+
+
+
+.tf-input {
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Kanit";
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Kanit";
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.tf-input input[type="text"] {
+  border: none;
+  width: 100%;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+
+.tf-title {
+    background: #0b8db2;
+    height: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-weight: normal;
+
+}
+
+.tf-btn-submit {
+    display: flex;
+    justify-content: center;
+    margin:25px;
+}
+
+.tf-btn-submit button {
+    background: #F48024;
+    padding: 10px;
+    width: 200px;
+    font-family: "Kanit";
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+/*
+    Styles affecting Transaction history panel on right
+
+*/
+
+.trans-history {
+    border: 1px solid #c0c0c0;  
+    display: inline-block;  
+    width: 60%;
+    margin: 10px 0 0 40px;
+    background: #FFFFFF;
+    z-index: -5;
+}
+
+.tf-briefcase {
+    background: url(../icons/briefcase.png);
+    background-blend-mode: color;      
+    margin: 10px 0 0 20px;
+    height: 24px;
+    width: 28px;
+    z-index:20;
+    float: left;
+    position: relative;
+}
+
+
+.tf-list {
+    padding: 20px; 
+}
+
+.tf-list-item {
+    /* padding: 10px 5px; */
+    height: 60px;
+    border: 1px solid #C0C0C0;
+    list-style-type: none;
+    position: relative;
+}
+
+.tf-date {
+    vertical-align: top;
+    display: inline-block;
+    width: 70px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.tf-code {
+    height: 100%;
+    width: 5px;
+    display: inline-block;    
+}
+
+.tf-type {
+    font-size:12px;
+    display: table-caption;
+    width: 150px;
+    margin-top: -6px;
+
+}
+
+.tf-merchant {
+    width: 50%;
+    margin-left: 100px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+}
+
+.tf-logo {
+    padding: 5px;
+    margin: 5px 10px;
+    position: absolute;
+    width: 60px;
+}
+
+.tf-logo img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.tf-amount {
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+}
